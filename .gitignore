@@ -1,0 +1,39 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# Checkpoints & weights
+*.pt
+*.pth
+*.ckpt
+*.safetensors
+
+# Experiment dumps / logs
+exp_records/*/
+!exp_records/.gitkeep
+wandb/
+runs/
+outputs/
+*.log
+
+# Data / caches
+datasets/
+data/raw/
+*.npz
+*.h5
+.cache/
+
+# OS / IDE
+.DS_Store
+.idea/
+.vscode/
+*.swp
+
+# Large binaries not in docs/media
+*.mp4
+!docs/media/**/*.mp4
+*.gif
+!docs/media/**/*.gif

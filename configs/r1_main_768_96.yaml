@@ -1,0 +1,40 @@
+# LoopWorld R1 — scaled main: width-768 / 96x96 (engineering demo)
+# After Stage C-style profile; ~1h wall. Not CVPR expansion / no memory module.
+experiment: R1
+role: main_scaled
+train_seed: 20261012
+image_size: 96
+patch_size: 4
+width: 768
+heads: 12
+pre_blocks: 1
+shared_core_blocks: 2
+post_blocks: 1
+train_loops: 4
+exit_loss_weights: [0.1666666667, 0.1666666667, 0.1666666667, 0.5]
+context_slots: 2
+single_context_probability: 0.5
+batch_size: 16
+model_precision: bf16_autocast
+geometry_precision: fp32
+optimizer: adamw
+learning_rate: 0.0003
+betas: [0.9, 0.999]
+weight_decay: 0.01
+grad_clip_norm: 1.0
+ema_decay_cap: 0.999
+flow_time_sampling: uniform_0_1
+rgb_loss_weight: 0.5
+depth_loss_weight: 0.5
+condition_noise: false
+cfg_scale: 1.0
+cfg_dropout: 0.0
+sampler: euler
+default_sampling_steps: 20
+main_update_budget_seconds: 3000
+main_wall_budget_seconds: 3600
+validation_scenes: 8
+test_scenes: 24
+rollout_generated_views: 24
+capacity_path: "768_96_scaled_after_640_profile"
+notes: "Scaled D: 96px width768 heads12. Profile: b32+ OOM; b16 ~14.3GiB (59%), sps~37.4; b24 ~20.9GiB (87%). Chose b16."
