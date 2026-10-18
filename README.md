@@ -218,7 +218,6 @@ weights/             # MODEL_CARD + SHA256SUMS (run fingerprints)
 docs/
   media/             # Figures, GIFs, H.264 demos
   technical_report.md
-  STORY.zh.md
 ```
 
 ---
@@ -226,8 +225,6 @@ docs/
 ## Further reading
 
 - [`docs/technical_report.md`](docs/technical_report.md) — stage chronology, maze progression figures, eval protocols
-- [`docs/media/MEDIA_MANIFEST.md`](docs/media/MEDIA_MANIFEST.md) — why each media asset is included
-- [`docs/STORY.zh.md`](docs/STORY.zh.md) — Chinese narrative
 
 ---
 
