@@ -12,8 +12,7 @@ venv/
 *.safetensors
 
 # Experiment dumps / logs
-exp_records/*/
-!exp_records/.gitkeep
+exp_records/
 wandb/
 runs/
 outputs/
